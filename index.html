@@ -1,75 +1,210 @@
 <!DOCTYPE html>
 <html lang="en,pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tá com Fome é FoodBox!</title>
-  
-  <style>
-    body {
-      background: lightgray;
-    }
-    .topo {
-      background:red;
-      color: white;
-      padding: 15px;
-      border-radius: 10px;
-  }
-    .produto {
-      background: white;
-      padding: 15px;
-      border-radius: 10px
-    }
-    h1 {
-      margin: 0;
-    }
-    h2 { 
-      margin: 0;
-      font-size: 18px;
-    }
-    h3 {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tá com FoodBox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #e5e5e5;
+        font-family: "Roboto";
+      }
+      .topo {
+        background: #cf2b2b;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+      }
+      .produto {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+        cursor: pointer;
+        border: 5px solid white;
+      }
+      h1 {
+        margin: 0;
+      }
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      h3 {
         font-size: 30px;
         margin-bottom: 5px;
       }
-    h4 {
-      margin-top: 0px;
-      margin-bottom: 5px;
-      font-size: 20px;
-    }
-    img {
-      width: 130px;
-      border-radius: 5px;
-      float: right;
-    }
-  </style>
+      h4 {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
+      img {
+        width: 150px;
+        border-radius: 5px;
+        float: right;
+      }
+      .botao {
+        background: #0b940b;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      p {
+        margin: 15px 0 0 0;
+      }
+      .preco {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topo">
+      <h1>FoodBox</h1>
+      <h2>Monte seu box e receba em 15 minutos!</h2>
+    </div>
+    <h3>Primeiro, seu prato</h3>
+    <div id="frango" class="produto" onclick="escolherFrango()">
+      <img
+        src="https://s1.1zoom.me/big0/684/The_second_dishes_Roast_470160.jpg"
+        alt="prato com frango frito do FoodBox, uma delícia"
+      />
+      <h4>Frango Chicken Frito</h4>
+      <p>Um pouco de salada, um pouco de batata</p>
+      <p class="preco">R$ 19,90</p>
+    </div>
+    <div id="burgerSuper" class="produto" onclick="escolherBuregerSuper()">
+      <img
+        src="https://static.wixstatic.com/media/51a53d_112d6134cf5a41638567925e38c6763e~mv2.jpg/v1/fill/w_1200,h_630,al_c/51a53d_112d6134cf5a41638567925e38c6763e~mv2.jpg"
+        alt=""
+      />
+      <h4>Burguer Super Gado</h4>
+      <p>Tempero speciale igual você, um verdadeiro sabor</p>
+      <p class="preco">R$ 25,67</p>
+    </div>
+    <div id="espaguete" class="produto" onclick="escolherEspaguete()">
+      <img
+        src="https://img.cybercook.com.br/receitas/610/espaguete-com-molho-a-bolonhesa-ou-ragu-bolognese-1.jpeg"
+        alt=""
+      />
+      <h4>Espaguete Feliz</h4>
+      <p>Para aquela super fome</p>
+      <p class="preco">R$ 28,89</p>
+    </div>
 
+    <div id="coca" class="produto" onclick="escolherCoca()">
+      <img
+        src="https://www.coca-cola.com.br/images/offers/ofertas-imperdiveis-paodeacucar-1.jpg"
+      />
+      <h4>Coca-cola gelada</h4>
+      <p>Normal, zero ou stevia. Vai na sorte.</p>
+      <p class="preco">R$ 5,90</p>
+    </div>
+    <div id="refresco" class="produto" onclick="escolherRefresco()">
+      <img
+        src="https://www.sportlife.com.br/wp-content/uploads/2016/04/diferenca-sucos.jpg"
+      />
+      <h4>Refresco</h4>
+      <p>Podia ser suco, mas leva água</p>
+      <p class="preco">R$ 3,90</p>
+    </div>
 
-</head>
-<body>
-  <div class="topo">
-    <h1>FoodBox</h1>
-    <h2>Monte seu box e receba em 15 minutos!</h2>
-  </div>
-  <h3>Primeiro, seu prato</h3>
-  <div class="produto">
-    <img src="https://s1.1zoom.me/big0/684/The_second_dishes_Roast_470160.jpg" alt="prato com frango frito do FoodBox, uma delícia">
-    <h4>Frango Chicken Frito</h4>
-    <p>Um pouco de batata, um pouco de salada.</p>
-    <p><strong>R$ 19,90</strong></p>
-  </div>
-  <div class="produto">
-    <img src="https://static.wixstatic.com/media/51a53d_112d6134cf5a41638567925e38c6763e~mv2.jpg/v1/fill/w_1200,h_630,al_c/51a53d_112d6134cf5a41638567925e38c6763e~mv2.jpg" alt="">
-    <h4>Burguer Super Gado</h4>
-    <p>Tempero speciale igual você, um verdadeiro sabor</p>
-    <p><strong>R$ 25,67</strong></p>
-  </div>
-  <div class="produto">
-    <img src="https://img.cybercook.com.br/receitas/610/espaguete-com-molho-a-bolonhesa-ou-ragu-bolognese-1.jpeg" alt="">
-    <h4>Espaguete Feliz</h4>
-    <p>Para aquela super fome</p>
-    <p><strong>R$ 28,89</strong></p>
-  </div>
-  
-</body>
+    <h3>Por fim, sua sobremesa</h3>
+    <div id="pudim" class="produto" onclick="escolherPudim()">
+      <img
+        src="https://img.itdg.com.br/tdg/images/recipes/000/031/593/318825/318825_original.jpg?mode=crop&width=710&height=400"
+      />
+      <h4>Pudim</h4>
+      <p>Apenas um lindo e brilhante pudim</p>
+      <p class="preco">R$ 7,90</p>
+    </div>
+    <div id="sorvete" class="produto" onclick="escolherSorvete()">
+      <img
+        src="https://media.istockphoto.com/photos/colorful-scoops-of-ice-cream-on-white-plate-picture-id915807638"
+      />
+      <h4>Sorvete bem gelado</h4>
+      <p>Três bolinhas como na foto</p>
+      <p class="preco">R$ 6,90</p>
+    </div>
+
+    <div class="botao" onclick="finalizarPedido()">
+      Finalizar pedido
+    </div>
+
+    <script>
+      let prato;
+      let bebida;
+      let sobremesa;
+
+      function escolherFrango() {
+        document.getElementById("frango").style.borderColor = "green";
+        document.getElementById("burgerSuper").style.borderColor = "white";
+        document.getElementById("espaguete").style.borderColor = "white";
+        prato = "Frango Frito";
+      }
+
+      function escolherBuregerSuper() {
+        document.getElementById("burgerSuper").style.borderColor = "green";
+        document.getElementById("frango").style.borderColor = "white";
+        document.getElementById("espaguete").style.borderColor = "white";
+        prato = "Super Burguer";
+      }
+
+      function escolherEspaguete() {
+        document.getElementById("espaguete").style.borderColor = "green";
+        document.getElementById("burgerSuper").style.borderColor = "white";
+        document.getElementById("frango").style.borderColor = "white";
+        prato = "Espaguete";
+      }
+
+      function escolherCoca() {
+        document.getElementById("coca").style.borderColor = "green";
+        document.getElementById("refresco").style.borderColor = "white";
+        bebida = "Coca-Cola";
+      }
+
+      function escolherRefresco() {
+        document.getElementById("refresco").style.borderColor = "green";
+        document.getElementById("coca").style.borderColor = "white";
+        bebida = "Refresco";
+      }
+
+      function escolherPudim() {
+        document.getElementById("pudim").style.borderColor = "green";
+        document.getElementById("sorvete").style.borderColor = "white";
+        sobremesa = "Pudim";
+      }
+
+      function escolherSorvete() {
+        document.getElementById("sorvete").style.borderColor = "green";
+        document.getElementById("pudim").style.borderColor = "white";
+        sobremesa = "Sorvete";
+      }
+
+      function finalizarPedido() {
+        let texto = `Olá, gostaria de pedir um combo: ${prato}, ${bebida}, ${sobremesa}`
+        let url = "https://wa.me/"
+        let telefone_loja = prompt("Qual o telefone da loja para enviar o Pedido ? Digite apenas números.")
+        url = url+telefone_loja+`?text=${texto}`;
+        window.open(url);
+      }
+    </script>
+  </body>
 </html>
