@@ -14,6 +14,6 @@ Foto do projeto Final.
 
 ![Projeto Final](/images/image-20210819070445981.png)
 
-Código no SandBox.io
+Página Web Online no Code SandBox
 
 https://27bwc.csb.app/
